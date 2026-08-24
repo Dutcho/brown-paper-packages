@@ -1,0 +1,71 @@
+[project]
+name = "brown-paper-packages"
+version = "0.1.0.2026.08.21"
+description = "Collection of 'a few of my favourite things' -i.e. PyPI packages- in order to stop repeating myself."
+readme = "README.md"
+authors = [ { name = "Dutcho" } ]
+requires-python = ">=3.13"
+dependencies = [
+    "brown-paper-packages[default]"
+]
+
+[project.optional-dependencies]
+utils = [
+    "more-itertools",           # iter algorithms
+    "sortedcontainers",         # sorted data structures
+    "orderedsets",              # order-retaining sets
+    "python-dotenv[cli]",       # .env access
+    "platformdirs",             # platform dependent paths
+
+    "sortedcontainers-stubs",   # type stubs
+]
+typing = [
+    "typing-extensions",        # new and experimental typing features
+    "useful-types",             # reusable protocols
+    "annotated-types",          # metadata for Annotated[]
+    "annotated-doc",            # Doc for Annotated[], when annotated-types is too much
+]
+default = [
+    "brown-paper-packages[utilities,typing]"
+]
+excel = [
+    "openpyxl",                 # process XLSX files, uses defusedxml for safety
+    "pyxlsb",                   # process XLSB files
+                                # TODO investigate variant pyxlsb2 with more functionality
+    "lxml",                     # fast XML parsing, overlap with extra web
+    "defusedxml",               # safety from XML bombs, overlap with extra web
+
+    "types-openpyxl",           # type stubs
+    "types-lxml",
+    "types-defusedxml",
+]
+data = [
+    "polars[pandas,numpy,excel]",
+    "duckdb",
+]
+web = [
+    "requests",
+    "Flask",
+    "FastAPI[standard]",
+    "BeautifulSoup4",           # uses lxml for speed
+    "lxml",                     # fast XML parsing, overlap with extra excel
+    "html5lib",
+    "defusedxml",               # safety from XML bombs, overlap with extra excel
+
+    "types-requests",           # type stubs
+    "types-beautifulsoup4",
+    "types-lxml",
+    "types-html5lib",
+    "types-defusedxml",
+]
+dev = [
+    "mypy",
+    "ty",
+]
+all = [
+    "brown-paper-packages[default,excel,data,web,dev]"
+]
+
+[build-system]
+requires = ["uv_build<1.0"]
+build-backend = "uv_build"
