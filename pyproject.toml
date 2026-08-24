@@ -1,6 +1,6 @@
 [project]
 name = "brown-paper-packages"
-version = "0.1.0.2026.08.21"
+version = "0.1.0.2026.08.24"
 description = "Collection of 'a few of my favourite things' -i.e. PyPI packages- in order to stop repeating myself."
 readme = "README.md"
 authors = [ { name = "Dutcho" } ]
