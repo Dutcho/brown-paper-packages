@@ -26,7 +26,7 @@ typing = [
     "annotated-doc",            # Doc for Annotated[], when annotated-types is too much
 ]
 default = [
-    "brown-paper-packages[utilities,typing]"
+    "brown-paper-packages[utils,typing]"
 ]
 excel = [
     "openpyxl",                 # process XLSX files, uses defusedxml for safety
