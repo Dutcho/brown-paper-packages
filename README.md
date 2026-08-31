@@ -32,23 +32,31 @@ These are a few of my favorite things
 ## Installation
 ### Default
 To install default packages in [utils](#utils) and [typing](#typing), use:
-> uv add brown-paper-packages
+```shell
+uv add brown-paper-packages
+```
 
 ### Specific extras
 To install default packages in [utils](#utils), [typing](#typing);
 and packages for _specific_ extras (choose from [Excel](#excel), [data](#data), [web](#web), [dev](#dev)), 
 use `[extra,...]`:
-> uv add brown-paper-packages[extra,...]
+```shell
+uv add brown-paper-packages[extra,...]
+```
 
 ### All packages
 To install default packages in [utils](#utils), [typing](#typing);
 and packages for _all_ extras [Excel](#excel), [data](#data), [web](#web), [dev](#dev), 
 use [extra](#specific-extras) `[all]`:
-> uv add brown-paper-packages[all]
+```shell
+uv add brown-paper-packages[all]
+```
 
 ## Usage
 Just use the installed packages directly, e.g.
-> import more_itertools
+```python
+import more_itertools
+```
 
 This package doesn't contain any functionality of its own.
 Therefore, there's no need for (lengthy and useless) 
