@@ -59,7 +59,7 @@ excel = [
     "types-defusedxml",
 ]
 data = [
-    "polars[pandas,numpy,excel]",
+    "polars[pandas,numpy,excel,pyarrow]",
     "duckdb",
 	"fsspec",					# for duckdb CSV handling
 ]
