@@ -41,6 +41,7 @@ utils = [
 typing = [
     "typing-extensions",        # new and experimental typing features
     "useful-types",             # reusable protocols
+    "optype",
     "annotated-types",          # metadata for Annotated[]
     "annotated-doc",            # Doc for Annotated[], when annotated-types is too much
 ]

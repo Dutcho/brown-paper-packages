@@ -11,7 +11,7 @@ def imports() -> Iterator[str]:
     except ImportError: pass
     else: yield 'utils'
 
-    try: import typing_extensions, useful_types, annotated_types, annotated_doc
+    try: import typing_extensions, useful_types, optype, annotated_types, annotated_doc
     except ImportError: pass
     else: yield 'typing'
 

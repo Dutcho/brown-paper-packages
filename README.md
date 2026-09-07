@@ -87,6 +87,7 @@ See [pyproject.toml file](./pyproject.toml) for details.
 * Additional types
   * [typing extensions](https://pypi.org/project/typing-extensions/)
   * [useful types](https://pypi.org/project/useful-types/)
+  * [optype](https://pypi.org/project/optype/)
 * Annotations
   * [annotated types](https://pypi.org/project/annotated-types/)
   * [annotated doc](https://pypi.org/project/annotated-doc/)
