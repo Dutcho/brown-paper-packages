@@ -1,6 +1,6 @@
 [project]
 name = "brown-paper-packages"
-version = "0.2.0.20260907"
+version = "0.2.0.20260908"
 description = "Brown paper packages (tied up with strings) - Collection of 'a few of my favourite things' -i.e. PyPI packages- in order to stop repeating myself."
 readme = "README.md"
 license = { file = "LICENSE" }
