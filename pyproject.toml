@@ -1,6 +1,6 @@
 [project]
 name = "brown-paper-packages"
-version = "0.1.1.20260831"
+version = "0.2.0.20260907"
 description = "Brown paper packages (tied up with strings) - Collection of 'a few of my favourite things' -i.e. PyPI packages- in order to stop repeating myself."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -65,17 +65,17 @@ data = [
 ]
 web = [
     "requests",
+    "BeautifulSoup4",           # uses lxml for speed
+    "html5lib",
     "Flask",
     "FastAPI[standard]",
-    "BeautifulSoup4",           # uses lxml for speed
     "lxml",                     # fast XML parsing, overlap with extra excel
-    "html5lib",
     "defusedxml",               # safety from XML bombs, overlap with extra excel
 
     "types-requests",           # type stubs
     "types-beautifulsoup4",
-    "types-lxml",
     "types-html5lib",
+    "types-lxml",
     "types-defusedxml",
 ]
 dev = [

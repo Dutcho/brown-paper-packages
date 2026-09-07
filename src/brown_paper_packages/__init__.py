@@ -6,6 +6,7 @@ def hello() -> str:
 
 
 def imports() -> Iterator[str]:
+    """Iterate over 'extras', i.e. groups of installed packages."""
     try: import more_itertools, sortedcontainers, orderedsets, dotenv, platformdirs
     except ImportError: pass
     else: yield 'utils'
@@ -18,11 +19,11 @@ def imports() -> Iterator[str]:
     except ImportError: pass
     else: yield 'excel'
 
-    try: import polars, duckdb
+    try: import polars, duckdb, fsspec
     except ImportError: pass
     else: yield 'data'
 
-    try: import requests, flask, fastapi, bs4, lxml, html5lib, defusedxml
+    try: import requests, bs4, html5lib, flask, fastapi, lxml, defusedxml
     except ImportError: pass
     else: yield 'web'
 

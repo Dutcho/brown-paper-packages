@@ -5,7 +5,11 @@ Collection of PyPI **packages** to stop repeating myself.
 ### Situation
 I noted I came back to repetitively installing the same PyPI packages in various projects.
 Sometimes, I couldn't recall their name or extras.
-At other times, I forgot importing optional, but important (to safety -e.g. `defusedxml`- or performance) dependencies. 
+At other times, I forgot importing optional, but important dependencies. That could impact
+- safety (e.g. `defusedxml`)
+- functionality (e.g. `fsspec`)
+- typing and autocomplete (various `types-...`)
+- performance (e.g. `lxml`)
 
 Now, I decided to put in the effort to come [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
@@ -18,6 +22,8 @@ Brown paper packages tied up with strings<br>
 These are a few of my favorite things
 </blockquote>
 <img src="https://live.staticflickr.com/5012/5560753633_5a03c9cdec_b.jpg" alt="Brown paper packages" height="250"/>
+
+Think of _this_ package being the string strapping together the contained packages. 
 
 ## Table of Contents
 * packages for extra [all](#all-packages)
@@ -37,16 +43,16 @@ uv add brown-paper-packages
 ```
 
 ### Specific extras
-To install default packages in [utils](#utils), [typing](#typing);
-and packages for _specific_ extras (choose from [Excel](#excel), [data](#data), [web](#web), [dev](#dev)), 
+To install default packages in [utils](#utils), [typing](#typing), 
+plus packages for _specific_ extras (choose from [Excel](#excel), [data](#data), [web](#web), [dev](#dev)), 
 use `[extra,...]`:
 ```shell
 uv add brown-paper-packages[extra,...]
 ```
 
 ### All packages
-To install default packages in [utils](#utils), [typing](#typing);
-and packages for _all_ extras [Excel](#excel), [data](#data), [web](#web), [dev](#dev), 
+To install default packages in [utils](#utils), [typing](#typing),
+plus packages for _all_ extras [Excel](#excel), [data](#data), [web](#web), [dev](#dev), 
 use [extra](#specific-extras) `[all]`:
 ```shell
 uv add brown-paper-packages[all]
@@ -86,9 +92,37 @@ See [pyproject.toml file](./pyproject.toml) for details.
   * [annotated doc](https://pypi.org/project/annotated-doc/)
 
 ### Excel
+* Excel variants
+  * [OpenPyXL for .XLSX files](https://pypi.org/project/openpyxl/)
+  * [pyxlsb for binary .XLSB files](https://pypi.org/project/pyxlsb/)
+* Supporting
+  * [lxml](https://pypi.org/project/lxml/)
+  * [defused XML](https://pypi.org/project/defusedxml/)
 
 ### Data
+* Dataframe
+  * [Polars](https://pypi.org/project/polars/)
+* Database
+  * [DuckDB](https://pypi.org/project/duckdb/)
+* Supporting
+  * [fsspec](https://pypi.org/project/fsspec/)
 
 ### Web
+* HTTP
+  * [requests](https://pypi.org/project/requests/)
+  * [Beautiful Soup 4](https://pypi.org/project/beautifulsoup4/)
+  * [HTML5lib](https://pypi.org/project/html5lib/)
+* Server
+  * [Flask](https://pypi.org/project/Flask/)
+  * [FastAPI](https://pypi.org/project/fastapi/)
+* Supporting
+  * [lxml](https://pypi.org/project/lxml/)
+  * [defused XML](https://pypi.org/project/defusedxml/)
 
 ### Dev
+* Type checkers
+  * [mypy](https://pypi.org/project/mypy/)
+  * [ty](https://pypi.org/project/ty/)
+ 
+  Note installing _within_ projects (`uv add`) ensures discovery within `venv`,
+  which global installation (`uv tool install`) doesn't accomplish.
