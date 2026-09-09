@@ -1,6 +1,6 @@
 [project]
 name = "brown-paper-packages"
-version = "0.2.0.20260908"
+version = "0.2.0.20260909"
 description = "Brown paper packages (tied up with strings) - Collection of 'a few of my favourite things' -i.e. PyPI packages- in order to stop repeating myself."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -33,6 +33,7 @@ utils = [
     "more-itertools",           # iter algorithms
     "sortedcontainers",         # sorted data structures
     "orderedsets",              # order-retaining sets
+    "record-type",              # light-weight immutable dataclass
     "python-dotenv[cli]",       # .env access
     "platformdirs",             # platform dependent paths
 
@@ -41,12 +42,9 @@ utils = [
 typing = [
     "typing-extensions",        # new and experimental typing features
     "useful-types",             # reusable protocols
-    "optype",
+    "optype",                   # reusable typehints
     "annotated-types",          # metadata for Annotated[]
     "annotated-doc",            # Doc for Annotated[], when annotated-types is too much
-]
-default = [
-    "brown-paper-packages[utils,typing]"
 ]
 excel = [
     "openpyxl",                 # process XLSX files, uses defusedxml for safety
@@ -82,6 +80,9 @@ web = [
 dev = [
     "mypy",
     "ty",
+]
+default = [
+    "brown-paper-packages[utils,typing]"
 ]
 all = [
     "brown-paper-packages[default,excel,data,web,dev]"
